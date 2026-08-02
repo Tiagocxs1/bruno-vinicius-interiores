@@ -66,11 +66,11 @@ def og_block(lang, title, desc, url, image):
         f'<meta property="og:title" content="{esc(title)}">\n'
         f'<meta property="og:description" content="{esc(desc)}">\n'
         f'<meta property="og:url" content="{url}">\n'
-        f'<meta property="og:image" content="{img}">\n'
-        f'<meta name="twitter:card" content="summary_large_image">\n'
-        f'<meta name="twitter:title" content="{esc(title)}">\n'
-        f'<meta name="twitter:description" content="{esc(desc)}">\n'
-        f'<meta name="twitter:image" content="{img}">'
+f'<meta property="og:image" content="{esc(BASE_URL)}/assets/img/og.jpg">\n'
+    f'<meta name="twitter:card" content="summary_large_image">\n'
+    f'<meta name="twitter:title" content="{esc(title)}">\n'
+    f'<meta name="twitter:description" content="{esc(desc)}">\n'
+    f'<meta name="twitter:image" content="{esc(BASE_URL)}/assets/img/og.jpg">'
     )
 
 
@@ -88,12 +88,14 @@ def head(lang, title, desc, sub="", extra=""):
 <meta name="author" content="Bruno Vinícius">
 {hreflang_block(lang, sub)}
 {og_block(lang, title, desc, full_url(lang, sub), IMAGES["og"])}
-<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{rel}">
+<style>noscript [data-reveal],noscript [data-reveal="late"]{{opacity:1;transform:none}}</style>
 {extra}
+<script>document.documentElement.classList.add('js-reveal');if(!('IntersectionObserver' in window)){{var all=document.querySelectorAll('[data-reveal]');for(var i=0;i<all.length;i++)all[i].classList.add('revealed')}}</script>
 </head>
 """
 
@@ -213,7 +215,7 @@ def section_hero(lang):
       </div>
     </div>
     <figure class="hero-media" data-reveal="late">
-      <img src="assets/img/hero.jpg" alt="{esc(SITE[lang]["meta"]["title"])}" width="2000" height="1142" fetchpriority="high">
+      <img src="/assets/img/hero.jpg" alt="{esc(SITE[lang]["meta"]["title"])}" width="2000" height="1142" fetchpriority="high">
     </figure>
   </div>
   <a class="hero-scroll" href="#statement" aria-label="{esc(s['scroll'])}"><span></span></a>
@@ -370,7 +372,7 @@ def journal_card(post, lang):
     return f"""<article class="jcard" data-reveal>
   <a href="{url}" class="jcard-link">
     <figure class="jcard-media">
-      <img src="assets/img/{post['image']}" alt="{esc(post['title'])}" loading="lazy" width="940" height="627">
+      <img src="/assets/img/{post['image']}" alt="{esc(post['title'])}" loading="lazy" width="940" height="627">
     </figure>
     <div class="jcard-meta"><span>{esc(cat)}</span><span>{post["read_time"]} min</span></div>
     <h3 class="jcard-title">{esc(post["title"])}</h3>
@@ -561,7 +563,7 @@ def render_blog_post(lang, index):
                 <p class="post-excerpt">{esc(post["excerpt"])}</p>
               </header>
               <figure class="post-hero" data-reveal>
-                <img src="assets/img/{post['image']}" alt="{esc(post['title'])}" width="940" height="627">
+                <img src="/assets/img/{post['image']}" alt="{esc(post['title'])}" width="940" height="627">
               </figure>
               <div class="post-body" data-reveal>
                 {render_blocks(post["blocks"])}

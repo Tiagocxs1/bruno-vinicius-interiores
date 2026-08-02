@@ -730,10 +730,10 @@ CONTACT = {
 }
 
 IMAGES = {
-    "hero": "assets/img/hero.jpg",
-    "og": "assets/img/og.jpg",
-    "about": "assets/img/studio-1.jpg",
-    "statement_thumb": "assets/img/detalhe-textura.jpg",
-    "marble": "assets/img/detalhe-marmore.jpg",
-    "velvet": "assets/img/detalhe-veludo.jpg",
+    "hero": "/assets/img/hero.jpg",
+    "og": "/assets/img/og.jpg",
+    "about": "/assets/img/studio-1.jpg",
+    "statement_thumb": "/assets/img/detalhe-textura.jpg",
+    "marble": "/assets/img/detalhe-marmore.jpg",
+    "velvet": "/assets/img/detalhe-veludo.jpg",
 }
