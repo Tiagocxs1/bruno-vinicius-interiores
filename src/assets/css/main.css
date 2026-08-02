@@ -272,7 +272,7 @@ a:hover { color: var(--accent); }
   .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
   .hero-media { order: -1; }
   .about-grid { grid-template-columns: 1fr; gap: 3rem; }
-  .** (RESIZE) about-media { max-height: 320px; object-fit: cover; }
+  .about-media img { max-height: 320px; object-fit: cover; }
   .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
   .quotes-grid { grid-template-columns: 1fr; gap: 2rem; }
   .jgrid { grid-template-columns: repeat(2, 1fr); }

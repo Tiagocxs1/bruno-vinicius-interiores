@@ -191,7 +191,7 @@ def lang_links_for_post(lang, slug):
 
 
 def project_image(proj):
-    return "assets/img/" + proj["image"]
+    return "/assets/img/" + proj["image"]
 
 
 # ---------------------------------------------------------------------------
