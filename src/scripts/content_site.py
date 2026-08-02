@@ -66,7 +66,7 @@ SITE = {
             "eyebrow": "Interior design studio",
             "h1_before": "Interiors with",
             "h1_em": "intention.",
-            "sub": "I design residential and hospitality spaces for clients around the world — calm, layered, and made to be lived in.",
+            "sub": "I design residential and hospitality spaces for clients around the world. calm, layered, and made to be lived in.",
             "cta_primary": "Start a project",
             "cta_secondary": "Selected work",
             "scroll": "Scroll",
@@ -76,7 +76,7 @@ SITE = {
         },
         "work": {
             "title": "Selected Work",
-            "sub": "A small selection of residential and hospitality projects — from full-scale renovations to tailored e-design.",
+            "sub": "A small selection of residential and hospitality projects. from full-scale renovations to tailored e-design.",
             "view_all": "View all projects",
             "filter_all": "All",
         },
@@ -97,7 +97,7 @@ SITE = {
         },
         "services": {
             "title": "Services",
-            "sub": "Six ways of working together — from a single room to a full project, in person or remotely.",
+            "sub": "Six ways of working together. from a single room to a full project, in person or remotely.",
             "items": [
                 {"t": "Residential Design", "d": "Complete design for homes and apartments — layout, materials, and styling, from first sketch to final reveal."},
                 {"t": "Hospitality & Commercial", "d": "Restaurants, boutiques, and workspaces designed to welcome people and perform all day."},
@@ -526,7 +526,7 @@ SITE = {
             "eyebrow": "Estúdio de design de interiores",
             "h1_before": "Interiores com",
             "h1_em": "intenção.",
-            "sub": "Desenho espaços residenciais e de hospitalidade para clientes no mundo todo — calmos, em camadas e feitos para serem vividos.",
+            "sub": "Desenho espaços residenciais e de hospitalidade para clientes no mundo todo. calmos, em camadas e feitos para serem vividos.",
             "cta_primary": "Iniciar um projeto",
             "cta_secondary": "Projetos selecionados",
             "scroll": "Role",
@@ -536,7 +536,7 @@ SITE = {
         },
         "work": {
             "title": "Projetos selecionados",
-            "sub": "Uma pequena seleção de projetos residenciais e de hospitalidade — de reformas completas ao e-design sob medida.",
+            "sub": "Uma pequena seleção de projetos residenciais e de hospitalidade. de reformas completas ao e-design sob medida.",
             "view_all": "Ver todos os projetos",
             "filter_all": "Todos",
         },
@@ -557,7 +557,7 @@ SITE = {
         },
         "services": {
             "title": "Serviços",
-            "sub": "Seis formas de trabalharmos juntos — de um único cômodo a um projeto completo, presencial ou remoto.",
+            "sub": "Seis formas de trabalharmos juntos. de um único cômodo a um projeto completo, presencial ou remoto.",
             "items": [
                 {"t": "Design residencial", "d": "Projeto completo para casas e apartamentos — layout, materiais e styling, do primeiro esboço à entrega final."},
                 {"t": "Hospitalidade e comercial", "d": "Restaurantes, boutiques e escritórios projetados para acolher pessoas e funcionar o dia inteiro."},
