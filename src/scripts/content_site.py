@@ -57,6 +57,11 @@ SITE = {
             "journal": "Journal",
             "contact": "Contact",
             "cta": "Start a project",
+            "view_project": "View project",
+            "prev_project": "Previous project",
+            "next_project": "Next project",
+            "other_langs": "Read in",
+            "back_to_work": "Back to work",
         },
         "meta": {
             "title": "Bruno Vinícius — Interior Design Studio",
@@ -172,6 +177,11 @@ SITE = {
             "journal": "Revista",
             "contact": "Contacto",
             "cta": "Iniciar un proyecto",
+            "view_project": "Ver proyecto",
+            "prev_project": "Proyecto anterior",
+            "next_project": "Próximo proyecto",
+            "other_langs": "Leer en",
+            "back_to_work": "Volver al trabajo",
         },
         "meta": {
             "title": "Bruno Vinícius — Estudio de Diseño de Interiores",
@@ -280,13 +290,18 @@ SITE = {
     "it": {
         "brand": "Bruno Vinícius",
         "studio": "Interior Design",
-        "nav": {
+"nav": {
             "work": "Progetti",
             "about": "Studio",
             "services": "Servizi",
             "journal": "Diario",
             "contact": "Contatti",
             "cta": "Inizia un progetto",
+            "view_project": "Vedi progetto",
+            "prev_project": "Progetto precedente",
+            "next_project": "Progetto successivo",
+            "other_langs": "Leggi in",
+            "back_to_work": "Torna ai progetti",
         },
         "meta": {
             "title": "Bruno Vinícius — Studio di Interior Design",
@@ -402,6 +417,11 @@ SITE = {
             "journal": "Journal",
             "contact": "Contact",
             "cta": "Lancer un projet",
+            "view_project": "Voir le projet",
+            "prev_project": "Projet précédent",
+            "next_project": "Projet suivant",
+            "other_langs": "Lire en",
+            "back_to_work": "Retour aux projets",
         },
         "meta": {
             "title": "Bruno Vinícius — Studio de Design d'intérieur",
@@ -517,6 +537,11 @@ SITE = {
             "journal": "Blog",
             "contact": "Contato",
             "cta": "Iniciar um projeto",
+            "view_project": "Ver projeto",
+            "prev_project": "Projeto anterior",
+            "next_project": "Próximo projeto",
+            "other_langs": "Ler em",
+            "back_to_work": "Voltar aos projetos",
         },
         "meta": {
             "title": "Bruno Vinícius — Estúdio de Design de Interiores",

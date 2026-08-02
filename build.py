@@ -270,18 +270,23 @@ def project_card(proj, lang):
     loc = proj["loc"][lang]
     blurb = proj["blurb"][lang]
     tall = "tall" if proj.get("tall") else ""
+    slug = proj["id"]
+    prefix = LANGUAGES[lang]["prefix"]
+    url = f"{prefix}/projects/{slug}.html"
     return f"""<article class="project {tall}" data-cat="{esc(cat)}" data-reveal>
-  <figure class="project-media">
-    <img src="{project_image(proj)}" alt="{esc(name)} — {esc(cat)}, {esc(loc)}" loading="lazy" width="940" height="627">
-    <figcaption class="project-cap">
-      <span class="project-cat">{esc(cat)}</span>
-      <span class="project-loc">{esc(loc)} · {proj["year"]}</span>
-    </figcaption>
-  </figure>
-  <div class="project-body">
-    <h3 class="project-name">{esc(name)}</h3>
-    <p class="project-blurb">{esc(blurb)}</p>
-  </div>
+  <a href="{url}" class="project-link" aria-label="{esc(s['nav']['view_project'])}: {esc(name)}">
+    <figure class="project-media">
+      <img src="{project_image(proj)}" alt="{esc(name)} — {esc(cat)}, {esc(loc)}" loading="lazy" width="940" height="627">
+      <figcaption class="project-cap">
+        <span class="project-cat">{esc(cat)}</span>
+        <span class="project-loc">{esc(loc)} · {proj["year"]}</span>
+      </figcaption>
+    </figure>
+    <div class="project-body">
+      <h3 class="project-name">{esc(name)}</h3>
+      <p class="project-blurb">{esc(blurb)}</p>
+    </div>
+  </a>
 </article>
 """
 
@@ -619,6 +624,89 @@ def render_blog_post(lang, index):
 
 
 # ---------------------------------------------------------------------------
+# Project pages
+# ---------------------------------------------------------------------------
+
+def render_project_page(lang, index):
+    s = SITE[lang]
+    projects = PROJECTS
+    proj = projects[index]
+    prefix = LANGUAGES[lang]["prefix"]
+    prev = projects[index - 1] if index > 0 else None
+    nxt = projects[index + 1] if index < len(projects) - 1 else None
+
+    name = proj["name"][lang]
+    cat = proj["cat"][lang]
+    loc = proj["loc"][lang]
+    blurb = proj["blurb"][lang]
+    year = proj["year"]
+    slug = proj["id"]
+    url = full_url(lang, f"/projects/{slug}.html")
+    project_schema = json.dumps({
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": name,
+        "description": blurb,
+        "image": BASE_URL + "/assets/img/" + proj["image"],
+        "creator": {"@type": "Person", "name": "Bruno Vinícius"},
+        "publisher": {"@type": "ProfessionalService", "name": s["brand"]},
+        "mainEntityOfPage": url,
+        "inLanguage": LANGUAGES[lang]["html"],
+        "genre": cat,
+    }, ensure_ascii=False)
+
+    pager = ""
+    if prev:
+        pager += f'<a class="pager" href="{prefix}/projects/{prev["id"]}.html"><span>{esc(s["nav"]["prev_project"])}</span><strong>{esc(prev["name"][lang])}</strong></a>'
+    if nxt:
+        pager += f'<a class="pager pager-next" href="{prefix}/projects/{nxt["id"]}.html"><span>{esc(s["nav"]["next_project"])}</span><strong>{esc(nxt["name"][lang])}</strong></a>'
+
+    body = "".join([
+        nav(lang, onepage=False),
+        f"""<main class="project-page">
+          <div class="container post-container">
+            <article>
+              <header class="post-head" data-reveal>
+                <p class="post-meta"><span>{esc(cat)}</span><span>{esc(loc)}</span><span>{year}</span></p>
+                <h1 class="post-title">{esc(name)}</h1>
+                <p class="post-excerpt">{esc(blurb)}</p>
+              </header>
+              <figure class="post-hero" data-reveal>
+                <img src="/assets/img/{proj['image']}" alt="{esc(name)}" width="940" height="627">
+              </figure>
+              <div class="post-body" data-reveal>
+                <p>{esc(blurb)}</p>
+              </div>
+            </article>
+            <aside class="post-langs">
+              <p>{esc(s["nav"]["other_langs"])}</p>
+              <p>{lang_links_for_project(lang, slug)}</p>
+            </aside>
+            <nav class="pager-wrap" aria-label="Pagination">
+              {pager}
+            </nav>
+            <p class="post-back"><a href="{prefix}/#work">← {esc(s["nav"]["back_to_work"])}</a></p>
+          </div>
+        </main>""",
+        footer(lang),
+    ])
+    return head(lang, f"{name} — {s['brand']}", blurb, sub=f"/projects/{slug}.html",
+                extra=f'<script type="application/ld+json">{project_schema}</script>') + (
+        f'<body class="inner">\n{body}\n'
+        f'<script src="assets/js/main.js" defer></script>\n{close()}'
+    )
+
+
+def lang_links_for_project(lang, slug):
+    items = []
+    for code, meta in LANGUAGES.items():
+        if code == lang:
+            continue
+        items.append(f'<a href="{meta["prefix"]}/projects/{slug}.html">{meta["native"]}</a>')
+    return " · ".join(items)
+
+
+# ---------------------------------------------------------------------------
 # Build
 # ---------------------------------------------------------------------------
 
@@ -635,6 +723,7 @@ def main():
     for lang in LANGUAGES:
         ldir = os.path.join(OUT, lang) if lang != DEFAULT_LANG else OUT
         os.makedirs(os.path.join(ldir, "blog"), exist_ok=True)
+        os.makedirs(os.path.join(ldir, "projects"), exist_ok=True)
         lroot = LANGUAGES[lang]["root"]
 
         with open(os.path.join(ldir, "index.html"), "w", encoding="utf-8") as f:
@@ -651,6 +740,12 @@ def main():
             with open(fname, "w", encoding="utf-8") as f:
                 f.write(render_blog_post(lang, i))
             urls.append(f"{lroot}blog/{post['slug']}.html")
+
+        for i, proj in enumerate(PROJECTS):
+            fname = os.path.join(ldir, "projects", f"{proj['id']}.html")
+            with open(fname, "w", encoding="utf-8") as f:
+                f.write(render_project_page(lang, i))
+            urls.append(f"{lroot}projects/{proj['id']}.html")
 
     # 404 (root)
     en = SITE[DEFAULT_LANG]
