@@ -79,14 +79,24 @@
     });
   }
 
-  // ---- header scroll state ----
-  const nav = document.querySelector('[data-nav]');
-  if (nav) {
-    let last = 0;
-    window.addEventListener('scroll', () => {
-      const y = window.scrollY;
-      nav.style.borderColor = y > 10 ? 'rgba(26,26,23,.22)' : 'rgba(26,26,23,.12)';
-    }, { passive: true });
-  }
+  // ---- parallax hero + nav shrink ----
+  const heroMedia = document.querySelector('.hero-media');
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        const y = window.scrollY;
+        if (nav) {
+          if (y > 80) nav.classList.add('shrunk');
+          else nav.classList.remove('shrunk');
+        }
+        if (heroMedia && y < window.innerHeight) {
+          heroMedia.style.transform = `translateY(${y * 0.08}px)`;
+        }
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
 
 })();

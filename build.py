@@ -166,9 +166,10 @@ def nav(lang, onepage=True):
 def footer(lang):
     s = SITE[lang]
     root = LANGUAGES[lang]["root"]
-    fb = []
-    for code, meta in LANGUAGES.items():
-        fb.append(f'<a href="{meta["root"]}">{meta["native"]}</a>')
+    options = "".join(
+        f'<option value="{LANGUAGES[code]["root"]}"{" selected" if code == lang else ""}>{meta["native"]}</option>'
+        for code, meta in LANGUAGES.items()
+    )
     return f"""<footer class="site-footer">
   <div class="container">
     <div class="footer-top">
@@ -185,8 +186,8 @@ def footer(lang):
         <a href="{root}#contact">{esc(s["nav"]["contact"])}</a>
       </nav>
       <nav class="footer-nav" aria-label="Languages">
-        <p class="footer-h">{esc(SITE[lang]["nav"]["journal"] if False else "Languages")}</p>
-        {''.join(fb)}
+        <p class="footer-h">Languages</p>
+        <select class="lang-switcher" aria-label="Change language">{options}</select>
       </nav>
     </div>
     <div class="footer-bottom">
@@ -222,15 +223,25 @@ def project_image(proj):
 def section_hero(lang):
     s = SITE[lang]["hero"]
     root = LANGUAGES[lang]["root"]
+    words = s["h1_before"].split()
+    em_words = s["h1_em"].split()
+    title_spans = ""
+    delay = 0
+    for w in words:
+        title_spans += f'<span class="hw" style="animation-delay:{delay:.2f}s">{esc(w)} </span>'
+        delay += 0.05
+    for w in em_words:
+        title_spans += f'<em><span class="hw" style="animation-delay:{delay:.2f}s">{w} </span></em>'
+        delay += 0.05
     return f"""<section class="hero" id="top">
   <div class="container hero-grid">
     <div class="hero-copy" data-reveal>
       <p class="hero-eyebrow">{esc(s["eyebrow"])}</p>
-      <h1 class="hero-title">{esc(s["h1_before"])} <em>{esc(s["h1_em"])}</em></h1>
+      <h1 class="hero-title">{title_spans}</h1>
       <p class="hero-sub">{esc(s["sub"])}</p>
       <div class="hero-ctas">
-        <a class="btn btn-accent" href="{root}#contact">{esc(s["cta_primary"])}</a>
-        <a class="btn btn-ghost" href="{root}#work">{esc(s["cta_secondary"])}</a>
+        <a class="btn btn-accent" style="animation-delay:{delay:.2f}s" href="{root}#contact">{esc(s["cta_primary"])}</a>
+        <a class="btn btn-ghost" style="animation-delay:{delay+.08:.2f}s" href="{root}#work">{esc(s["cta_secondary"])}</a>
       </div>
     </div>
     <figure class="hero-media" data-reveal="late">
