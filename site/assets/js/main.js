@@ -68,6 +68,17 @@
     });
   }
 
+  // ---- theme toggle ----
+  const themeToggle = document.querySelector('[data-theme-toggle]');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (_) {}
+    });
+  }
+
   // ---- header scroll state ----
   const nav = document.querySelector('[data-nav]');
   if (nav) {

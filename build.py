@@ -92,9 +92,10 @@ def head(lang, title, desc, sub="", extra=""):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{rel}">
+<link rel="stylesheet" href="/assets/css/main.css">
 <style>noscript [data-reveal],noscript [data-reveal="late"]{{opacity:1;transform:none}}</style>
 {extra}
+<script>(function(){{var t;try{{t=localStorage.getItem('theme')}}catch(_){{}}if(!t){{t=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}}document.documentElement.setAttribute('data-theme',t)}})()</script>
 <script>document.documentElement.classList.add('js-reveal');if(!('IntersectionObserver' in window)){{var all=document.querySelectorAll('[data-reveal]');for(var i=0;i<all.length;i++)all[i].classList.add('revealed')}}</script>
 </head>
 """
@@ -130,6 +131,15 @@ def nav(lang, onepage=True):
     <nav class="nav-links" aria-label="Primary">
       {items}
       {lang_switcher}
+      <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme" type="button">
+        <svg class="theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="5"></circle>
+          <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+        </svg>
+        <svg class="theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
       <a class="btn btn-accent nav-cta" href="{root}#contact">{esc(s["nav"]["cta"])}</a>
       <button class="nav-burger" data-burger aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -138,6 +148,15 @@ def nav(lang, onepage=True):
   </div>
   <nav class="mobile-menu" data-mobile aria-hidden="true">
     {items}
+    <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme" type="button">
+      <svg class="theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <circle cx="12" cy="12" r="5"></circle>
+        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+      </svg>
+      <svg class="theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+    </button>
     <a class="btn btn-accent" href="{root}#contact">{esc(s["nav"]["cta"])}</a>
   </nav>
 </header>
