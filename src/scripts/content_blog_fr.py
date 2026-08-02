@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 """Articles de blog — FRANÇAIS. 7 articles, optimisés SEO pour la niche de la décoration d’intérieur."""
 
 BLOG = [
@@ -48,7 +48,7 @@ BLOG = [
             {"t": "h2", "c": "Commencez par le comportement, pas par le vocabulaire"},
             {"t": "p", "c": "Avant de penser aux matières ou aux couleurs, répondez honnêtement à trois questions. Comment utilisez-vous réellement la pièce, heure par heure ? Qui y partage votre vie, et à quelle fréquence ? Et comment voulez-vous vous sentir en y entrant — reposé, stimulé, accueilli, concentré ? Le style est la réponse à ces questions, traduite en forme physique. Tout le reste est de la décoration."},
             {"t": "h2", "c": "Séparez ce que vous aimez de ce avec quoi vous voulez vivre"},
-            {"t": "p", "c": "C’est la distinction qui sauve les projets. Un hall d’hôtel peut être superbe et rester un mauvais modèle pour votre salon, car un hôtel est conçu pour un séjour de trente minutes. Votre maison, elle, est conçue pour une décennie de soirées ordinaires. Rassemblez les images que vous aimez, puis divisez-les en deux listes : inspirantes, et réellement vivables. Leur intersection, c’est votre style."},
+            {"t": "p", "c": "C'est la distinction qui compte. Un hall d’hôtel peut être superbe et rester un mauvais modèle pour votre salon, car un hôtel est conçu pour un séjour de trente minutes. Votre maison, elle, est conçue pour une décennie de soirées ordinaires. Rassemblez les images que vous aimez, puis divisez-les en deux listes : inspirantes, et réellement vivables. Leur intersection, c’est votre style."},
             {"t": "quote", "c": "Un style qui vous demande de changer votre façon de vivre ne survivra pas au contact de votre vie."},
             {"t": "h2", "c": "Travaillez à partir d’une seule référence forte"},
             {"t": "p", "c": "Dans l’intersection, choisissez une direction comme ancre — la palette ou la pièce clé dont vous êtes sûr — et laissez tout le reste se négocier autour d’elle. Les pièces qui semblent indécises ont généralement deux ou trois références fortes qui se tirent dessus. Une seule ancre, appliquée avec constance, fait qu’une pièce semble conçue plutôt que décorée."},

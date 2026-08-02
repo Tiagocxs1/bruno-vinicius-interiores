@@ -40,7 +40,7 @@ BLOG = [
         "category": "Fundamentos",
         "read_time": 6,
         "image": "blog-5.jpg",
-        "title": "Como Escolher um Estilo de Decoração que Cabe na Sua Vida",
+        "title": "Como escolher um estilo de decoração que cabe na sua vida",
         "excerpt": "A maioria dos testes de estilo erra o ponto. A direção certa vem de como você vive, não do Pinterest. Um caminho prático para encontrar a sua.",
         "meta": "Como escolher um estilo de decoração: um processo prático baseado em como você vive, trabalha e recebe — em vez do Pinterest ou de testes de estilo.",
         "blocks": [

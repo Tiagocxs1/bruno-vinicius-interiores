@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 """Blog posts — ENGLISH. 7 articles, SEO-aligned to the interior design niche."""
 
 BLOG = [
@@ -40,7 +40,7 @@ BLOG = [
         "category": "Fundamentals",
         "read_time": 6,
         "image": "blog-5.jpg",
-        "title": "How to Choose an Interior Design Style That Fits Your Life",
+        "title": "How to choose an interior design style that fits your life",
         "excerpt": "Most style quizzes miss the point. The right direction comes from how you live, not from Pinterest. A practical way to find yours.",
         "meta": "How to choose an interior design style: a practical process based on how you live, work and host — instead of Pinterest or style quizzes.",
         "blocks": [
@@ -48,7 +48,7 @@ BLOG = [
             {"t": "h2", "c": "Start with behaviour, not vocabulary"},
             {"t": "p", "c": "Before thinking about materials or colours, answer three questions honestly. How do you actually use the room, hour by hour? Who is in it with you, and how often? And how do you want to feel when you walk in — rested, energised, welcomed, focused? The style is the answer to those questions, expressed in physical form. Everything else is decoration."},
             {"t": "h2", "c": "Separate what you love from what you want to live with"},
-            {"t": "p", "c": "This is the distinction that saves projects. A hotel lobby can be stunning and still be the wrong model for your living room, because a hotel is designed for a thirty-minute stay. Your home is designed for a decade of ordinary evenings. Collect images you love, then split them into two lists: inspiring, and actually liveable. The overlap is your style."},
+            {"t": "p", "c": "This is the distinction that matters. A hotel lobby can be stunning and still be the wrong model for your living room, because a hotel is designed for a thirty-minute stay. Your home is designed for a decade of ordinary evenings. Collect images you love, then split them into two lists: inspiring, and actually liveable. The overlap is your style."},
             {"t": "quote", "c": "A style that asks you to change how you live will not survive contact with your life."},
             {"t": "h2", "c": "Work with one strong reference"},
             {"t": "p", "c": "Out of the overlap, choose one direction as the anchor — the palette or the key piece you feel sure about — and let everything else be negotiated around it. Rooms that feel indecisive usually have two or three strong references pulling against each other. One anchor, applied consistently, is what makes a room feel designed rather than decorated."},
@@ -168,7 +168,7 @@ BLOG = [
             {"t": "h2", "c": "2. Design"},
             {"t": "p", "c": "Concept, mood, materials, and layout — developed together and refined until it feels inevitable. You will see plans, palettes, and material samples, and we will go back and forth until the design matches the way you actually live. This is where the vision takes shape, before a single wall is touched."},
             {"t": "h2", "c": "3. Development"},
-            {"t": "p", "c": "Technical drawings, sourcing, and coordination with builders and artisans, managed end to end. You receive clear budgets and a realistic timeline, and I handle the suppliers so you are not the middle person. The unknowns are resolved here, on paper, where they are cheap."},
+            {"t": "p", "c": "Technical drawings, sourcing, and coordination with builders and artisans, managed from start to finish. You receive clear budgets and a realistic timeline, and I handle the suppliers so you are not the middle person. The unknowns are resolved here, on paper, where they are cheap."},
             {"t": "quote", "c": "A good process moves the problems onto the paper early, where they are cheap to solve — not onto the build, where they are expensive."},
             {"t": "h2", "c": "4. Delivery"},
             {"t": "p", "c": "Installation and styling, down to the last object. The space is handed over ready to live in — not staged for a photograph, but arranged for your week. This is the moment everything quietly clicks, and it is the reason the process exists."},

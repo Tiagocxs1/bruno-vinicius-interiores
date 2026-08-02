@@ -90,7 +90,7 @@ SITE = {
             "process": [
                 {"t": "Discover", "d": "We talk through how you live, work, and host. I listen for the feeling you want the space to carry."},
                 {"t": "Design", "d": "Concept, mood, materials, and layout — developed together, refined until it feels inevitable."},
-                {"t": "Develop", "d": "Technical drawings, sourcing, and coordination with builders and artisans, managed end to end."},
+                {"t": "Develop", "d": "I handle technical drawings, sourcing, and coordination with builders and artisans, from start to finish."},
                 {"t": "Deliver", "d": "Installation and styling, down to the last object. The space is handed over ready to live in."},
             ],
             "note": "Clear budgets, honest timelines, no surprises.",
