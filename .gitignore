@@ -1,0 +1,6 @@
+src/assets/img
+src/scripts/__pycache__
+__pycache__
+*.pyc
+.DS_Store
+.vercel

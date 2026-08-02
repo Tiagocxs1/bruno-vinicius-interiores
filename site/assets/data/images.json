@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "file": "hero.jpg",
+    "source": "pexels",
+    "author": "Sandeep Lasar",
+    "author_url": "https://www.pexels.com/@sandeep-lasar-863959106",
+    "license": "Pexels License",
+    "description": "A lavish modern living area featuring chandeliers, luxurious seating, and elegant decor.",
+    "bytes": 85899,
+    "url": "https://images.pexels.com/photos/20418771/pexels-photo-20418771.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+  },
+  "project-sala": {
+    "file": "project-sala.jpg",
+    "source": "pexels",
+    "author": "Alex Tyson",
+    "author_url": "https://www.pexels.com/@alex-tyson-919593032",
+    "license": "Pexels License",
+    "description": "A cozy Scandinavian living room with modern gray couch and wooden elements.",
+    "bytes": 73573,
+    "url": "https://images.pexels.com/photos/19966766/pexels-photo-19966766.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+  },
+  "project-cozinha": {
+    "file": "project-cozinha.jpg",
+    "source": "pexels",
+    "author": "Lisa Anna",
+    "author_url": "https://www.pexels.com/@lisa-anna-901356985",
+    "license": "Pexels License",
+    "description": "Elegant minimalist kitchen with stainless steel sink, lemon, and white cabinets.",
+    "bytes": 22362,
+    "url": "https://images.pexels.com/photos/19836790/pexels-photo-19836790.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+  },
+  "project-quarto": {
+    "file": "project-quarto.jpg",
+    "source": "pexels",
+    "author": "Letícia Alvares",
+    "author_url": "https://www.pexels.com/@leticia-alvares-1805702",
+    "license": "Pexels License",
+    "description": "A serene morning setup with a book and coffee on a bed, perfect for relaxation.",
+    "bytes": 30459,
+    "url": "https://images.pexels.com/photos/31145676/pexels-photo-31145676.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+  },
+  "project-escritorio": {
+    "file": "project-escritorio.jpg",
+    "source": "pexels",
+    "author": "Pușcaș Adryan",
+    "author_url": "https://www.pexels.com/@pu-ca-adryan-163345030",
+    "license": "Pexels License",
+    "description": "Sleek and stylish home office with wooden furniture and glass desk.",
+    "bytes": 50405,
+    "url": "https://images.pexels.com/photos/13075330/pexels-photo-13075330.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+  },
+  "project-restaurante": {
+    "file": "project-restaurante.jpg",
+    "source": "pexels",
+    "author": "Meriç Aydın",
+    "author_url": "https://www.pexels.com/@meric-aydin-355263951",
+    "license": "Pexels License",
+    "description": "Modern hotel lobby featuring stylish escalators and festive decor.",
+    "bytes": 54368,
+    "url": "https://images.pexels.com/photos/14841129/pexels-photo-14841129.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+  },
+  "project-luminaria": {
+    "file": "project-luminaria.jpg",
+    "source": "pexels",
+    "author": "Ali Askar",
+    "author_url": "https://www.pexels.com/@ali-askar-2154757026",
+    "license": "Pexels License",
+    "description": "Warm and inviting hanging pendant lights in a modern indoor setting.",
+    "bytes": 15382,
+    "url": "https://images.pexels.com/photos/33792074/pexels-photo-33792074.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+  },
+  "detalhe-textura": {
+    "file": "detalhe-textura.jpg",
+    "source": "pexels",
+    "author": "Diego F. Parra",
+    "author_url": "https://www.pexels.com/@diego-f-parra-33199",
+    "license": "Pexels License",
+    "description": "A striking geometric architectural pattern illuminated by natural light beams filtering through openings.",
+    "bytes": 43560,
+    "url": "https://images.pexels.com/photos/15128965/pexels-photo-15128965.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+  },
+  "detalhe-marmore": {
+    "file": "detalhe-marmore.jpg",
+    "source": "pexels",
+    "author": "https://kaboompics.com/",
+    "author_url": "https://www.pexels.com/@karola-g",
+    "license": "Pexels License",
+    "description": "Close-up of a marble surface showcasing natural patterns in various colors.",
+    "bytes": 79778,
+    "url": "https://images.pexels.com/photos/4705924/pexels-photo-4705924.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+  },
+  "detalhe-veludo": {
+    "file": "detalhe-veludo.jpg",
+    "source": "pexels",
+    "author": "Mâide Arslan",
+    "author_url": "https://www.pexels.com/@maide-arslan-128712163",
+    "license": "Pexels License",
+    "description": "Cozy restaurant interior in Munich featuring a vintage carpet and stylish seating arrangements.",
+    "bytes": 53608,
+    "url": "https://images.pexels.com/photos/18988620/pexels-photo-18988620.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+  },
+  "studio-1": {
+    "file": "studio-1.jpg",
+    "source": "pexels",
+    "author": "cottonbro studio",
+    "author_url": "https://www.pexels.com/@cottonbro",
+    "license": "Pexels License",
+    "description": "Minimalist office setup highlighting art inspiration and design samples for creativity.",
+    "bytes": 21656,
+    "url": "https://images.pexels.com/photos/6580015/pexels-photo-6580015.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+  },
+  "blog-1": {
+    "file": "blog-1.jpg",
+    "source": "pexels",
+    "author": "Max Vakhtbovych",
+    "author_url": "https://www.pexels.com/@artbovich",
+    "license": "Pexels License",
+    "description": "Minimalist wooden furniture in modern studio apartment with white sofa and kitchen cupboards in sunlight",
+    "bytes": 60712,
+    "url": "https://images.pexels.com/photos/6890400/pexels-photo-6890400.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+  },
+  "blog-2": {
+    "file": "blog-2.jpg",
+    "source": "pexels",
+    "author": "Karolina Grabowska www.kaboompics.com",
+    "author_url": "https://www.pexels.com/@karola-g2",
+    "license": "Pexels License",
+    "description": "A collection of colorful paint swatches spread out showcasing a variety of hues.",
+    "bytes": 57248,
+    "url": "https://images.pexels.com/photos/5933/color-paint-palette-wall-painting.jpg?auto=compress&cs=tinysrgb&h=650&w=940"
+  },
+  "blog-3": {
+    "file": "blog-3.jpg",
+    "source": "pexels",
+    "author": "HONG SON",
+    "author_url": "https://www.pexels.com/@hson",
+    "license": "Pexels License",
+    "description": "Sophisticated bedroom design featuring a beige headboard, blue walls, and wood flooring with ample natural light.",
+    "bytes": 33036,
+    "url": "https://images.pexels.com/photos/34574606/pexels-photo-34574606.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+  },
+  "blog-4": {
+    "file": "blog-4.jpg",
+    "source": "pexels",
+    "author": "Hiba Q. Omar",
+    "author_url": "https://www.pexels.com/@hiba-q-omar-106562569",
+    "license": "Pexels License",
+    "description": "Elegant modern staircase with marble flooring, showcasing minimalist design and clean lines.",
+    "bytes": 55610,
+    "url": "https://images.pexels.com/photos/14613821/pexels-photo-14613821.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+  },
+  "blog-5": {
+    "file": "blog-5.jpg",
+    "source": "pexels",
+    "author": "cottonbro studio",
+    "author_url": "https://www.pexels.com/@cottonbro",
+    "license": "Pexels License",
+    "description": "A man and woman reviewing design samples in a stylish, contemporary office space.",
+    "bytes": 30259,
+    "url": "https://images.pexels.com/photos/6580554/pexels-photo-6580554.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+  },
+  "blog-6": {
+    "file": "blog-6.jpg",
+    "source": "pexels",
+    "author": "Ksenia Chernaya",
+    "author_url": "https://www.pexels.com/@kseniachernaya",
+    "license": "Pexels License",
+    "description": "Contemporary house interior with open doors in cellophane and construction materials on floor in daytime",
+    "bytes": 30610,
+    "url": "https://images.pexels.com/photos/5691533/pexels-photo-5691533.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+  },
+  "og": {
+    "file": "og.jpg",
+    "source": "unsplash",
+    "author": "aranprime",
+    "author_url": "https://unsplash.com/@aranprime",
+    "license": "Unsplash License",
+    "description": "brown and white couch beside window",
+    "bytes": 1893327,
+    "url": "https://images.unsplash.com/photo-1599696848652-f0ff23bc911f?ixid=M3w0NTE3NDh8MHwxfHNlYXJjaHwxfHxjb250ZW1wb3JhcnklMjBpbnRlcmlvciUyMGRlc2lnbiUyMG1vb2R8ZW58MHx8fHwxNzg1Njk3MDcxfDA&ixlib=rb-4.1.0"
+  }
+}
