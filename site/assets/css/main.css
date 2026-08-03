@@ -145,6 +145,10 @@ a:hover { color: var(--accent); }
 /* language switcher on change via JS */
 .lang-switcher:hover { border-color: var(--accent); }
 
+/* native dropdown options — explicit colors per theme */
+.lang-switcher option { background: #FFFFFF; color: #1A1A17; }
+[data-theme="dark"] .lang-switcher option { background: #1E1E1B; color: #F5F5F0; }
+
 /* theme toggle */
 .theme-toggle {
   display: inline-flex; align-items: center; justify-content: center;
