@@ -79,7 +79,21 @@
     });
   }
 
+  // ---- gallery thumbs ----
+  const heroImg = document.querySelector('.gallery-hero');
+  const thumbs = document.querySelectorAll('.gthumb');
+  if (heroImg && thumbs.length) {
+    thumbs.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        heroImg.src = btn.dataset.img;
+        thumbs.forEach((b) => b.classList.toggle('is-active', b === btn));
+      });
+    });
+    thumbs[0].classList.add('is-active');
+  }
+
   // ---- parallax hero + nav shrink ----
+  const nav = document.querySelector('nav');
   const heroMedia = document.querySelector('.hero-media');
   let ticking = false;
   window.addEventListener('scroll', () => {

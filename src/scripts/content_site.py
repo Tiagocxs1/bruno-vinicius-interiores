@@ -58,6 +58,7 @@ SITE = {
             "contact": "Contact",
             "cta": "Start a project",
             "view_project": "View project",
+            "about_project": "The brief",
             "prev_project": "Previous project",
             "next_project": "Next project",
             "other_langs": "Read in",
@@ -662,8 +663,18 @@ PROJECTS = [
             "es": "Un sereno apartamento reformado en torno a la luz natural y los materiales táctiles.",
             "it": "Un appartamento sereno riprogettato intorno alla luce naturale e ai materiali tattili.",
             "fr": "Un appartement serein repensé autour de la lumière naturelle et des matières tactiles.",
-            "pt": "Um apartamento sereno redesenhado em torno da luz natural e de materiais táteis.",
+            "pt": "Um apartamento sereno redesenhado em torno da luz natural e de materiais tateis.",
         },
+        "surface": {"en": "180 m2", "es": "180 m2", "it": "180 m2", "fr": "180 m2", "pt": "180 m2"},
+        "about": {
+            "en": "Casa Aurora is a 180 m2 apartment in the Jardins neighbourhood of Sao Paulo. The owners needed a home that shifts from a quiet morning retreat to a dinner space for twelve.\n\nThe original layout was dark and compartmentalised. I removed two non-structural walls and replaced them with a continuous axis of built-in joinery: a low credenza, a linen-wrapped screen, and a pocket bookcase that slides along a ceiling track.\n\nThe palette was chosen for how it registers light: raw beige marble, shou-sugi-ban charred timber, waxed wool, and hand-glazed ceramics. Cool at lunch, warm by late afternoon, quiet by candlelight.",
+        },
+        "headline": {
+            "en": "When the light enters, everything else negotiates.",
+        },
+        "gallery": [
+            "casa-aurora-gallery-1.jpg", "casa-aurora-gallery-2.jpg", "casa-aurora-gallery-3.jpg", "casa-aurora-gallery-4.jpg"
+        ],
     },
     {
         "id": "alba-house",
@@ -678,8 +689,18 @@ PROJECTS = [
             "es": "Minimalismo cálido para una familia joven, equilibrando apertura e intimidad.",
             "it": "Minimalismo caldo per una giovane famiglia, tra apertura e intimità.",
             "fr": "Un minimalisme chaleureux pour une jeune famille, entre ouverture et intimité.",
-            "pt": "Minimalismo quente para uma jovem família, equilibrando amplitude e intimidade.",
+            "pt": "Minimalismo quente para uma jovem familia, equilibrando amplitude e intimidade.",
         },
+        "surface": {"en": "210 m2", "es": "210 m2", "it": "210 m2", "fr": "210 m2", "pt": "210 m2"},
+        "about": {
+            "en": "Alba House is a former bakery on a cobbled street in Lisbon, converted into an open-plan home for a young family. The original bones were generous: four-meter vaulted ceilings, west-facing windows, and century-old pine beams.\n\nThe family wanted the space to remain open but intimate. I designed oversized upholstered sofas, a low timber dining table, and a reading nook with floor cushions - creating zones without walls.\n\nMaterials are simple and durable: Portuguese limestone flooring, warm-toned pine, and floor-to-ceiling cabinets on sliding tracks so the layout can change as the children grow.",
+        },
+        "headline": {
+            "en": "A former bakery becomes a warm family home.",
+        },
+        "gallery": [
+            "alba-house-gallery-1.jpg", "alba-house-gallery-2.jpg", "alba-house-gallery-3.jpg", "alba-house-gallery-4.jpg"
+        ],
     },
     {
         "id": "bistro-melo",
@@ -694,8 +715,19 @@ PROJECTS = [
             "es": "Un interior de restaurante compacto donde la iluminación marca el ambiente nocturno.",
             "it": "Un ristorante compatto dove l'illuminazione definisce l'atmosfera serale.",
             "fr": "Un restaurant compact où l'éclairage installe l'ambiance du soir.",
-            "pt": "Um restaurante compacto onde a iluminação define o clima da noite.",
+            "pt": "Um restaurante compacto onde a iluminacao define o clima da noite.",
         },
+        "surface": {"en": "95 m2", "es": "95 m2", "it": "95 m2", "fr": "95 m2", "pt": "95 m2"},
+        "about": {
+            "en": "Bistro Melo is a 30-seat restaurant in an old warehouse in Porto. The chef splits his time between Japan and Portugal; the interior had to read equally well under candlelight at dinner and bright daylight at lunch.\n\nI designed a single long room with the open kitchen along one wall. A 10-meter bench in beeswaxed light wood anchors the dining zone, while the opposite wall divides service from social with arched breezeblocks remaining from the old grain storage.\n\nCustom ceramic pendants in a crushed beige glaze hang low over each table. Cast their warm circle, switching each meal into a small theatre.",
+        },
+        "headline": {
+            "en": "Thirty seats by candlelight.",
+            "pt": "Trinta lugares a luz de velas.",
+        },
+        "gallery": [
+            "bistro-melo-gallery-1.jpg", "bistro-melo-gallery-2.jpg", "bistro-melo-gallery-3.jpg", "bistro-melo-gallery-4.jpg"
+        ],
     },
     {
         "id": "villa-serena",
@@ -710,8 +742,18 @@ PROJECTS = [
             "es": "Elegancia en capas para un refugio junto al lago, anclada en tonos serenos.",
             "it": "Eleganza a strati per un rifugio sul lago, radicata in toni quieti.",
             "fr": "Une élégance en couches pour une retraite au bord du lac, ancrée dans des tons calmes.",
-            "pt": "Elegância em camadas para um refúgio à beira do lago, ancorada em tons serenos.",
+            "pt": "Elegancia em camadas para um refugio a beira do lago, ancorado em tons serenos.",
         },
+        "surface": {"en": "340 m2", "es": "340 m2", "it": "340 m2", "fr": "340 m2", "pt": "340 m2"},
+        "about": {
+            "en": "Villa Serena is a nineteenth-century stone house on Lake Como, inherited by a Milan-based family who wanted restraint, not spectacle. The house had three layers of wallpaper, worn marble, and lake-facing windows that drew every eye outward.\n\nI kept the structure quiet and layered into the interior through soft contrasts: hand-painted linen drapes, oiled oak floors sanded back to the raw reveal, and a kitchen island carved from a single pale stone block.\n\nThe palette draws from the water: cream, slate-grey, and a muted sage - anchored by the lake, which does all the talking, even on calm days.",
+        },
+        "headline": {
+            "en": "An old villa finds rhythm in the silence of the lake.",
+        },
+        "gallery": [
+            "villa-serena-gallery-1.jpg", "villa-serena-gallery-2.jpg", "villa-serena-gallery-3.jpg", "villa-serena-gallery-4.jpg"
+        ],
     },
     {
         "id": "atelier-norte",
@@ -726,8 +768,18 @@ PROJECTS = [
             "es": "Un estudio sereno para una práctica de diseño: flexible, enfocado y humano.",
             "it": "Uno studio calmo per una pratica di design: flessibile, focalizzato, umano.",
             "fr": "Un studio calme pour une pratique de design — flexible, concentré, humain.",
-            "pt": "Um estúdio calmo para uma prática de design — flexível, focado, humano.",
+            "pt": "Um estudio calmo para uma pratica de design - flexivel, focado, humano.",
         },
+        "surface": {"en": "130 m2", "es": "130 m2", "it": "130 m2", "fr": "130 m2", "pt": "130 m2"},
+        "about": {
+            "en": "Atelier Norte is a design studio in a former warehouse in Copenhagen. The brief was minimal: open space, good light, and nothing that competes with the work on the tables.\n\nI created a clean arrangement around a pair of monolithic concrete work tables that seat twelve, surrounded by charcoal felt panels to dampen sound. Daylight pours from three renovated skylights, and a slim wall of propped plasterboard separates turning space from the material library.\n\nEvery surface is functional, every colour is borrowed from the northern light. By four in the afternoon the studio glows without artificial addition.",
+        },
+        "headline": {
+            "en": "A design studio that works with daylight.",
+        },
+        "gallery": [
+            "atelier-norte-gallery-1.jpg", "atelier-norte-gallery-2.jpg", "atelier-norte-gallery-3.jpg", "atelier-norte-gallery-4.jpg"
+        ],
     },
     {
         "id": "suite-no-7",
@@ -742,8 +794,18 @@ PROJECTS = [
             "es": "Una suite de hotel boutique que explora profundidad, textura y luz reparadora.",
             "it": "Una suite di hotel boutique che esplora profondità, texture e luce riposante.",
             "fr": "Une suite d'hôtel boutique qui explore la profondeur, la texture et la lumière reposante.",
-            "pt": "Uma suíte de hotel boutique explorando profundidade, textura e luz repousante.",
+            "pt": "Uma suite de hotel boutique explorando profundidade, textura e luz repousante.",
         },
+        "surface": {"en": "72 m2", "es": "72 m2", "it": "72 m2", "fr": "72 m2", "pt": "72 m2"},
+        "about": {
+            "en": "Suite No. 7 occupies the top floor of a boutique hotel near Porta Venezia in Milan. The room is narrow, with a slope ceiling, and lantern facing the courtyard. The challenge was not generous footage but that age-old luxury question: how do you get a guest to exhale within seconds?\n\nI followed a singular proposition - everything the hand touches must feel intentional. The bed linens are hand-spun Belgian flax, the walls are raw plaster with a warm chalk pigment, the wardrobe panels are black charcoal graphite that drop in deep, soft reflective.\n\nLighting descends without glare: the main piece is a silk-cocoon reading lamp that floats as though held by the air. No clutter: each floor detail earn its place.\n\n",
+        },
+        "headline": {
+            "en": "A room that asks you to exhale.",
+        },
+        "gallery": [
+            "suite-no-7-gallery-1.jpg", "suite-no-7-gallery-2.jpg", "suite-no-7-gallery-3.jpg", "suite-no-7-gallery-4.jpg"
+        ],
     },
 ]
 

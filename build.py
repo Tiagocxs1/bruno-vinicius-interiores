@@ -641,6 +641,11 @@ def render_project_page(lang, index):
     blurb = proj["blurb"][lang]
     year = proj["year"]
     slug = proj["id"]
+    headline = proj.get("headline", {}).get(lang, proj.get("headline", {}).get("en", ""))
+    about_text = proj.get("about", {}).get(lang, proj.get("about", {}).get("en", ""))
+    surface = proj.get("surface", {}).get(lang, "")
+    gallery = proj.get("gallery", [])
+    about_title = s["nav"].get("about_project", "About the project")
     url = full_url(lang, f"/projects/{slug}.html")
     project_schema = json.dumps({
         "@context": "https://schema.org",
@@ -648,7 +653,7 @@ def render_project_page(lang, index):
         "name": name,
         "description": blurb,
         "image": BASE_URL + "/assets/img/" + proj["image"],
-        "creator": {"@type": "Person", "name": "Bruno Vinícius"},
+        "creator": {"@type": "Person", "name": "Bruno Vinicius"},
         "publisher": {"@type": "ProfessionalService", "name": s["brand"]},
         "mainEntityOfPage": url,
         "inLanguage": LANGUAGES[lang]["html"],
@@ -661,21 +666,44 @@ def render_project_page(lang, index):
     if nxt:
         pager += f'<a class="pager pager-next" href="{prefix}/projects/{nxt["id"]}.html"><span>{esc(s["nav"]["next_project"])}</span><strong>{esc(nxt["name"][lang])}</strong></a>'
 
+    sf = f"<span>{esc(surface)}</span>" if surface else ""
+
+    ga = ""
+    if gallery:
+        thumbs = ""
+        for i, img in enumerate(gallery):
+            thumbs += f'<button class="gthumb" data-img="/assets/img/{img}" type="button"><img src="/assets/img/{img}" alt="Detail {i+1}" width="200" height="150" loading="lazy"></button>\n'
+        ga = f"""<div class="gallery-main" data-reveal>
+      <img src="/assets/img/{gallery[0]}" alt="{esc(name)}" class="gallery-hero" width="940" height="627">
+    </div>
+    <div class="gallery-thumbs" data-reveal="late">
+      {thumbs}</div>"""
+
+    hx = f'<h2 class="project-headline">{esc(headline)}</h2>' if headline else ""
+
+    ap = ""
+    if about_text:
+        blocks = [p.strip() for p in about_text.split("\n\n") if p.strip()]
+        ap = "\n".join(f"<p>{esc(p)}</p>" for p in blocks)
+
     body = "".join([
         nav(lang, onepage=False),
         f"""<main class="project-page">
           <div class="container post-container">
             <article>
               <header class="post-head" data-reveal>
-                <p class="post-meta"><span>{esc(cat)}</span><span>{esc(loc)}</span><span>{year}</span></p>
+                <p class="post-meta"><span>{esc(cat)}</span><span>{esc(loc)}</span><span>{year}</span>{sf}</p>
                 <h1 class="post-title">{esc(name)}</h1>
                 <p class="post-excerpt">{esc(blurb)}</p>
               </header>
               <figure class="post-hero" data-reveal>
                 <img src="/assets/img/{proj['image']}" alt="{esc(name)}" width="940" height="627">
               </figure>
+              {ga}
               <div class="post-body" data-reveal>
-                <p>{esc(blurb)}</p>
+                {hx}
+                <h2>{esc(about_title)}</h2>
+                {ap}
               </div>
             </article>
             <aside class="post-langs">
@@ -685,7 +713,7 @@ def render_project_page(lang, index):
             <nav class="pager-wrap" aria-label="Pagination">
               {pager}
             </nav>
-            <p class="post-back"><a href="{prefix}/#work">← {esc(s["nav"]["back_to_work"])}</a></p>
+            <p class="post-back"><a href="{prefix}#work">← {esc(s["nav"]["back_to_work"])}</a></p>
           </div>
         </main>""",
         footer(lang),

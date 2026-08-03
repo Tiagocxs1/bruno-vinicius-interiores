@@ -344,6 +344,15 @@ a:hover { color: var(--accent); }
 .pager-next { text-align: right; }
 .post-back { margin-top: 2rem; font-size: .85rem; }
 
+/* project gallery */
+.gallery-main { margin-top: 2rem; }
+.gallery-hero { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
+.gallery-thumbs { display: grid; grid-template-columns: repeat(4, 1fr); gap: .75rem; margin-top: .75rem; }
+.gthumb { padding: 0; border: 1px solid var(--border); background: none; cursor: pointer; opacity: .72; transition: opacity .25s ease, border-color .25s ease, transform .25s ease; }
+.gthumb:hover, .gthumb.is-active { opacity: 1; border-color: var(--accent); transform: translateY(-2px); }
+.gthumb img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
+@media (max-width: 767px) { .gallery-thumbs { grid-template-columns: repeat(2, 1fr); } }
+
 /* 404 */
 .nf { min-height: 80dvh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 2rem; margin-top: 72px; }
 .nf-title { font-family: var(--serif); font-size: 5rem; font-weight: 500; color: var(--accent); margin-bottom: .5rem; }
