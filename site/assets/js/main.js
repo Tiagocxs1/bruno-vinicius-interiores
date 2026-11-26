@@ -42,7 +42,7 @@
   const form = document.querySelector('[data-form]');
   const feedback = document.querySelector('.form-feedback');
   if (form && feedback) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = form.querySelector('.btn-submit');
       const name = form.name.value.trim();
@@ -56,15 +56,36 @@
         return;
       }
 
+      if (btn) btn.disabled = true;
       const subject = `Project enquiry — ${name}`;
       const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0AType: ${type}%0D%0A%0D%0A${msg}`;
       const mailto = `mailto:hello@brunovinicius.design?subject=${encodeURIComponent(subject)}&body=${body}`;
 
-      feedback.style.display = 'block';
-      feedback.textContent = form.getAttribute('data-success') || 'Thank you — your message is on its way.';
-      feedback.style.color = (getComputedStyle(document.documentElement).getPropertyValue('--accent') || '#2E3A33').trim();
-
-      window.open(mailto, '_blank');
+      try {
+        const response = await fetch('https://tsdigitais-central-astro.tiagocxs-tdb.workers.dev/api/public/forms/bbf61b2cbd9e4c4ba39c913c7bf9b8fc/submissions', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            data: { name, email, type, message: msg },
+            sourceUrl: window.location.href,
+            referrerUrl: document.referrer,
+            parentOrigin: window.location.origin,
+          }),
+        });
+        if (!response.ok) {
+          const result = await response.json().catch(() => ({}));
+          throw new Error(result.error || 'CRM unavailable');
+        }
+        feedback.textContent = 'Your enquiry has been registered. Your email app will open so you can complete the message.';
+      } catch (error) {
+        console.error('Central CRM form sync failed:', error);
+        feedback.textContent = 'We could not register this enquiry automatically. Your email app will open so you can still contact us.';
+      } finally {
+        feedback.style.display = 'block';
+        feedback.style.color = (getComputedStyle(document.documentElement).getPropertyValue('--accent') || '#2E3A33').trim();
+        window.open(mailto, '_blank');
+        if (btn) btn.disabled = false;
+      }
     });
   }
 
