@@ -65,18 +65,13 @@
       feedback.textContent = 'Sending your enquiry…';
 
       try {
-        const response = await fetch('https://tsdigitais-central-astro.tiagocxs-tdb.workers.dev/api/public/forms/bbf61b2cbd9e4c4ba39c913c7bf9b8fc/submissions', {
+        const response = await fetch('/api/leads', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            data: { name, email, type, message: msg },
-            sourceUrl: window.location.href,
-            referrerUrl: document.referrer,
-            parentOrigin: window.location.origin,
-          }),
+          body: JSON.stringify({ name, email, type, message: msg }),
         });
         const result = await response.json().catch(() => ({}));
-        if (!response.ok || result.ok !== true) {
+        if (!response.ok || result.success !== true || result.crmSynced !== true) {
           throw new Error(result.error || 'CRM submission failed');
         }
         const notifications = result.notifications || {};
