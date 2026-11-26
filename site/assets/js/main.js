@@ -45,10 +45,11 @@
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = form.querySelector('.btn-submit');
-      const name = form.name.value.trim();
-      const email = form.email.value.trim();
-      const type = form.type.value.trim();
-      const msg = form.message.value.trim();
+      const fields = new FormData(form);
+      const name = String(fields.get('name') || '').trim();
+      const email = String(fields.get('email') || '').trim();
+      const type = String(fields.get('type') || '').trim();
+      const msg = String(fields.get('message') || '').trim();
 
       if (!name || !email || !msg) {
         feedback.style.display = 'block';
@@ -56,10 +57,12 @@
         return;
       }
 
-      if (btn) btn.disabled = true;
-      const subject = `Project enquiry — ${name}`;
-      const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0AType: ${type}%0D%0A%0D%0A${msg}`;
-      const mailto = `mailto:hello@brunovinicius.design?subject=${encodeURIComponent(subject)}&body=${body}`;
+      if (btn) {
+        btn.disabled = true;
+        btn.textContent = 'Sending…';
+      }
+      feedback.style.display = 'block';
+      feedback.textContent = 'Sending your enquiry…';
 
       try {
         const response = await fetch('https://tsdigitais-central-astro.tiagocxs-tdb.workers.dev/api/public/forms/bbf61b2cbd9e4c4ba39c913c7bf9b8fc/submissions', {
@@ -72,19 +75,25 @@
             parentOrigin: window.location.origin,
           }),
         });
-        if (!response.ok) {
-          const result = await response.json().catch(() => ({}));
-          throw new Error(result.error || 'CRM unavailable');
+        const result = await response.json().catch(() => ({}));
+        if (!response.ok || result.ok !== true) {
+          throw new Error(result.error || 'CRM submission failed');
         }
-        feedback.textContent = 'Your enquiry has been registered. Your email app will open so you can complete the message.';
-      } catch (error) {
-        console.error('Central CRM form sync failed:', error);
-        feedback.textContent = 'We could not register this enquiry automatically. Your email app will open so you can still contact us.';
-      } finally {
-        feedback.style.display = 'block';
+        const notifications = result.notifications || {};
+        const emailStatus = notifications.email === 'sent' ? 'Email notification sent.' : 'Email notification is not configured yet.';
+        const telegramStatus = notifications.telegram === 'sent' ? 'Telegram notification sent.' : 'Telegram notification is not configured yet.';
+        feedback.textContent = (form.getAttribute('data-success') || 'Your enquiry has been registered.') + ' ' + emailStatus + ' ' + telegramStatus;
         feedback.style.color = (getComputedStyle(document.documentElement).getPropertyValue('--accent') || '#2E3A33').trim();
-        window.open(mailto, '_blank');
-        if (btn) btn.disabled = false;
+        form.reset();
+      } catch (error) {
+        console.error('Central CRM form submission failed:', error);
+        feedback.textContent = form.getAttribute('data-error') || 'We could not register your enquiry. Please try again or email hello@brunovinicius.design directly.';
+        feedback.style.color = '#b42318';
+      } finally {
+        if (btn) {
+          btn.disabled = false;
+          btn.textContent = 'Send message';
+        }
       }
     });
   }
